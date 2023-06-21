@@ -1,6 +1,14 @@
 body {
   margin: 0;
-  font-family: 'karla', sans-serif;
+  font-family: 'Karla', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
 }
 
 header {
@@ -33,6 +41,64 @@ header>p {
   font-weight: 700;
   font-size: 20.7482px;
   line-height: 24px;
+  letter-spacing: -0.1em;
+
+  color: #FFFFFF;
+}
+
+.form-conteiner {
+  margin-top: 36px;
+  display: flex;
+  justify-content: center;
+
+}
+
+input[type='text'] {
+  display: flex;
+  flex: 1;
+  border: 1px solid #D5D4D8;
+  border-radius: 5px;
+  height: 35px;
+  width: 230px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 14px;
+  color: #0D0D0D;
+}
+
+input[type='text']::placeholder {
+
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 14px;
+}
+
+form {
+  display: flex;
+  max-width: 500px;
+  gap: 17px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+input[type='button'] {
+  height: 40px;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+
+  background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+
+  text-align: center;
   letter-spacing: -0.1em;
 
   color: #FFFFFF;
