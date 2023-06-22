@@ -48,6 +48,11 @@ header>p {
 
 main {
   padding: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .form-conteiner {
@@ -111,4 +116,9 @@ button {
   letter-spacing: -0.1em;
 
   color: #FFFFFF;
+}
+
+.meme-img {
+  padding: 30px;
+  width: 100%;
 }
