@@ -8,29 +8,31 @@ export default function Form() {
     randomImg: "https://i.imgflip.com/1ur9b0.jpg",
   });
 
+  const [allMeme, setAllMeme] = React.useState({});
+
+  React.useEffect(() => {
+    fetch("https://api.imgflip.com/get_memes")
+      .then((responce) => responce.json())
+      .then((data) => setAllMeme(data));
+  }, []);
+
+  function getMemeImage() {
+    const randomNumber = Math.floor(Math.random() * allMeme.data.memes.length);
+    const randomImg = allMeme.data.memes[randomNumber].url;
+    setMeme((prevMeme) => {
+      return {
+        ...prevMeme,
+        randomImg: randomImg,
+      };
+    });
+  }
+
   function handleChange(event) {
     const { name, value } = event.target;
     setMeme((prevMeme) => {
       return {
         ...prevMeme,
         [name]: value,
-      };
-    });
-  }
-
-  const [allMemeImg, setAllMemeImg] = React.useState(memeData);
-
-  function getMemeImage() {
-    const randomNumber = Math.floor(
-      Math.random() * allMemeImg.data.memes.length
-    );
-
-    const randomImg = allMemeImg.data.memes[randomNumber].url;
-    console.log(randomImg);
-    setMeme((prevMeme) => {
-      return {
-        ...prevMeme,
-        randomImg: randomImg,
       };
     });
   }
