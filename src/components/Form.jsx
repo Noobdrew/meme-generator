@@ -1,4 +1,3 @@
-import memeData from "../memeData";
 import React from "react";
 
 export default function Form() {
